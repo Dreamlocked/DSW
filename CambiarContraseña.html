@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperar Contraseña</title>
+  <link rel="stylesheet" href="./CSS/Estilo_Recuperar.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+  <div class="login-box">
+    <img class="avatar" src="./Images/logoIngresar.jpg" alt="Logo de BrainPlay">
+    <h1>Recuperar contraseña</h1>
+    <p>Se le enviará por correo una contraseña autogenerada, la cual deberá cambiar al momento de ingresar al sistema.
+    </p>
+    <form method="post" id="form-recuperar">
+      <!--CORREO ELECTRÓNICO-->
+      <label for="correo">Correo electrónico</label>
+      <input type="correo" name="correo" id="correo" placeholder="Correo electrónico">
+      <input type="submit" value="Enviar">
+      <a href="Ingresar.html">Recordé mi contraseña</a><br>
+      <a href="./Registrar.html">Crear cuenta</a>
+    </form>
+  </div>
+  <script src="./JS/recuperarPassword.js"></script>
+</body>
+
+</html>

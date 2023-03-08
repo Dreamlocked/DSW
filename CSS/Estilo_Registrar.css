@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../Images/cuento1.png) no-repeat center top / cover;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+.login-box{
+    width: 350px;
+    height: 660px;
+    background: #fff;
+    top: 51%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 55px 30px;
+    border-radius: 10px;
+}
+
+.login-box .avatar{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px;
+    left: calc(50% - 40px);
+}
+
+.login-box h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.login-box input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"],
+.login-box input[type="date"],
+.login-box input[type="email"]{
+    border: none;
+    border-bottom: 1px solid darkgray;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+}
+
+.login-box input[type="submit"]{
+    border: none;
+    outline:none;
+    height: 40px;
+    background: #e67d5d;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.login-box input[type="text"]:hover,
+.login-box input[type="password"]:hover,
+.login-box input[type="date"]:hover,
+.login-box input[type="email"]:hover{
+    border-bottom: 1px solid #DD5C35;
+}
+
+.login-box input[type="submit"]:hover{
+    background: #e67d5d;
+}
+
+.login-box a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: rgb(83, 83, 83)
+}
+
+.login-box a:hover{
+    color:#DD5C35;
+}
+
+.login-box p {
+    font-size: 12px;
+    line-height: 20px;
+    color: rgb(83, 83, 83)
+}
+
+
+span{
+    font-size: 12px;
+    font-family: sans-serif;
+}

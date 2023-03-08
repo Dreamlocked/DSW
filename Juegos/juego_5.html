@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shorcut icon" href="./Images/icono-brainplay.ico">
+    <link rel="stylesheet" href="../CSS/styleWordle.css">
+    <script src="../JS/user-info.js"></script>
+    <title>WORDLE</title>
+</head>
+<body onload="onLoad()">
+    <nav id="barra-nav">
+    <a href="./index.html"><img src="../Images/logoBrainPlay.png" alt="logo"></a>
+    <ul>
+      <li><a class="seccion" href="../index.html">Inicio</a></li>
+      <li><a class="seccion" href="../cuentos.html">Cuentos</a></li>
+      <li><a class="seccion" href="../juegos.html">Juegos</a></li>
+    </ul>
+    <div class="botones">
+      <a class="ingreso" href="../Ingresar.html">Ingresar</a>
+      <a class="registro" href="../Registrar.html">Registrarse</a>
+    </div>
+    <div class="user-info">
+      <a class="seccion" href="../mi_perfil.html">
+        <img src="../Images/user.png" alt="User">
+        <p id="nombre-usuario">Username</p>
+      </a>
+      <a class="logout" href="../Ingresar.html" id="cerrar">Cerrar sesión</a>
+    </div>
+  </nav>
+    <br>
+    <a class="regresar" href="../Ingresar.html">Regresar</a>
+    
+    <h1>WORDLE</h1> 
+      
+    <main class="main-container">
+        <!--<h2 class="loading">Cargando...</h2>-->
+        <div class="row" id="1">
+            <!--<input type="text" maxlength="1" class="square">-->
+        </div>
+    </main>
+    <div class="result">
+        <!--<p>ganaste</p>
+        <button class="button">Reiniciar</button>-->
+    </div>
+    <script src="../JS/mainWordle.js"></script>
+</body>
+</html>

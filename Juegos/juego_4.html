@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../CSS/juegoRompecabeza.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <link rel="shorcut icon" href="./Images/icono-brainplay.ico">
+  <script src="../JS/user-info.js"></script>
+</head>
+
+<body onload="onLoad()">
+  <nav id="barra-nav">
+    <a href="./index.html"><img src="../Images/logoBrainPlay.png" alt="logo"></a>
+    <ul>
+      <li><a class="seccion" href="../index.html">Inicio</a></li>
+      <li><a class="seccion" href="../cuentos.html">Cuentos</a></li>
+      <li><a class="seccion" href="../juegos.html">Juegos</a></li>
+    </ul>
+    <div class="botones">
+      <a class="ingreso" href="../Ingresar.html">Ingresar</a>
+      <a class="registro" href="../Registrar.html">Registrarse</a>
+    </div>
+    <div class="user-info">
+      <a class="seccion" href="../mi_perfil.html">
+        <img src="../Images/user.png" alt="User">
+        <p id="nombre-usuario">Username</p>
+      </a>
+      <a class="logout" href="../Ingresar.html" id="cerrar">Cerrar sesión</a>
+    </div>
+  </nav>
+  <div class="container">
+
+    <div class="text-cont">
+      <h2>Instrucciones</h2>
+      <p>
+        Escoge la imágen que prefieras y diviértete armando este rompecabezas. Aprenderás jugando los nombres de los países, planetas y partes del cuerpo. El nivel de dificultad varía según el nivel que escojas: fácil, medio y difícil.
+      </p>
+    </div>
+
+    <div class="container2" id="inicio">
+      <button id="play-btn">Jugar</button>
+    </div>
+
+    <div id="image-selection" class="hidden">
+      <h2>Selecciona la imagen a armar</h2>
+      <div id="image-container">
+        <div>
+          <img src="../Images/rompecabeza1/imagen.jpg" class="imagen-sombreada" alt="Imagen 1" id="img1" data-nombre="imagen-1.jpg"
+            height="100" width="200">
+            <div>
+              <button id="8-pieces-btn"><center>Fácil</center></button>
+            </div>
+        </div>
+        <div>
+          <img src="../Images/rompecabeza2/mapa.jpg" class="imagen-sombreada" alt="Imagen 2" id="img2" data-nombre="imagen-2.jpg"
+            height="100" width="200">
+          <div>
+            <button id="16-pieces-btn"><center>Medio</center></button>
+          </div>
+        </div>
+        <div>
+          <img src="../Images/rompecabeza3/planeta.jpg" class="imagen-sombreada" alt="Imagen 3" id="img3" data-nombre="imagen-3.jpg"
+            height="100" width="200">
+            <div>
+              <button id="32-pieces-btn"><center>Difícil</center></button>
+            </div>
+        </div>
+      </div>
+      <!--<button id="boton-iniciar">Iniciar juego</button>-->
+      <button id="miboton" class="boton"> Volver </button>
+    </div>
+  
+    <div id="rompecabeza1" class="hidden">
+      <svg id="entorno" >
+        <g id="fondo"><image href="../Images/rompecabeza1/imagen.jpg" width="400" height="400" x="350"  y="10"></g>
+          <g class="padre" id="0"><image href="../Images/rompecabeza1/9.jpg" class="movil"></g>
+          <g class="padre" id="1"><image href="../Images/rompecabeza1/8.jpg" class="movil"></g>
+          <g class="padre" id="2"><image href="../Images/rompecabeza1/7.jpg" class="movil"></g>
+          <g class="padre" id="3"><image href="../Images/rompecabeza1/6.jpg" class="movil"></g>
+          <g class="padre" id="4"><image href="../Images/rompecabeza1/5.jpg" class="movil"></g>
+          <g class="padre" id="5"><image href="../Images/rompecabeza1/4.jpg" class="movil"></g>
+          <g class="padre" id="6"><image href="../Images/rompecabeza1/3.jpg" class="movil"></g>
+          <g class="padre" id="7"><image href="../Images/rompecabeza1/2.jpg" class="movil"></g>
+          <g class="padre" id="8"><image href="../Images/rompecabeza1/1.jpg" class="movil"></g>
+      </svg>
+      <button id="volver1">Volver</button>
+    </div>
+
+    <div id="result1" class="hidden">
+      <h2> Ganaste el juego </h2>
+      <p> Puntuación: 20 </p>
+      <button id="reiniciar1">Reiniciar</button>
+    </div>
+
+    <div id="rompecabeza2" class="hidden">
+      <svg id="entorno2" >
+        <g id="fondo"><image href="../Images/rompecabeza2/mapa.jpg" width="400" height="400" x="350"  y="10"></g>
+          <g class="padre2" id="0"><image href="../Images/rompecabeza2/12.jpg" class="movil2"></g>
+          <g class="padre2" id="1"><image href="../Images/rompecabeza2/11.jpg" class="movil2"></g>
+          <g class="padre2" id="2"><image href="../Images/rompecabeza2/10.jpg" class="movil2"></g>
+          <g class="padre2" id="3"><image href="../Images/rompecabeza2/9.jpg" class="movil2"></g>
+          <g class="padre2" id="4"><image href="../Images/rompecabeza2/8.jpg" class="movil2"></g>
+          <g class="padre2" id="5"><image href="../Images/rompecabeza2/7.jpg" class="movil2"></g>
+          <g class="padre2" id="6"><image href="../Images/rompecabeza2/6.jpg" class="movil2"></g>
+          <g class="padre2" id="7"><image href="../Images/rompecabeza2/5.jpg" class="movil2"></g>
+          <g class="padre2" id="8"><image href="../Images/rompecabeza2/4.jpg" class="movil2"></g>
+          <g class="padre2" id="9"><image href="../Images/rompecabeza2/3.jpg" class="movil2"></g>
+          <g class="padre2" id="10"><image href="../Images/rompecabeza2/2.jpg" class="movil2"></g>
+          <g class="padre2" id="11"><image href="../Images/rompecabeza2/1.jpg" class="movil2"></g>
+      </svg>
+      <button id="volver2">Volver</button>
+    </div>
+
+    <div id="result2" class="hidden">
+      <h2> Ganaste el juego </h2>
+      <p> Puntuación: 20 </p>
+      <button id="reiniciar2">Reiniciar</button>
+    </div>
+
+    <div id="rompecabeza3" class="hidden">
+      <svg id="entorno3" >
+        <g id="fondo"><image href="../Images/rompecabeza3/planeta.jpg" width="400" height="400" x="350"  y="10"></g>
+          <g class="padre3" id="0"> <image href="../Images/rompecabeza3/16.jpg" class="movil3"></g>
+          <g class="padre3" id="1"><image href="../Images/rompecabeza3/15.jpg" class="movil3"></g>
+          <g class="padre3" id="2"><image href="../Images/rompecabeza3/14.jpg" class="movil3"></g>
+          <g class="padre3" id="3"><image href="../Images/rompecabeza3/13.jpg" class="movil3"></g>
+          <g class="padre3" id="4"><image href="../Images/rompecabeza3/12.jpg" class="movil3"></g>
+          <g class="padre3" id="5"><image href="../Images/rompecabeza3/11.jpg" class="movil3"></g>
+          <g class="padre3" id="6"><image href="../Images/rompecabeza3/10.jpg" class="movil3"></g>
+          <g class="padre3" id="7"><image href="../Images/rompecabeza3/9.jpg" class="movil3"></g>
+          <g class="padre3" id="8"><image href="../Images/rompecabeza3/8.jpg" class="movil3"></g>
+          <g class="padre3" id="9"><image href="../Images/rompecabeza3/7.jpg" class="movil3"></g>
+          <g class="padre3" id="10"><image href="../Images/rompecabeza3/6.jpg" class="movil3"></g>
+          <g class="padre3" id="11"><image href="../Images/rompecabeza3/5.jpg" class="movil3"></g>
+          <g class="padre3" id="12"><image href="../Images/rompecabeza3/4.jpg" class="movil3"></g>
+          <g class="padre3" id="13"><image href="../Images/rompecabeza3/3.jpg" class="movil3"></g>
+          <g class="padre3" id="14"><image href="../Images/rompecabeza3/2.jpg" class="movil3"></g>
+          <g class="padre3" id="15"><image href="../Images/rompecabeza3/1.jpg" class="movil3"></g>
+      </svg>
+      <button id="volver3">Volver</button>
+    </div>
+
+    <div id="result3" class="hidden">
+      <h2> Ganaste el juego </h2>
+      <p> Puntuación: 20 </p>
+      <button id="reiniciar3">Reiniciar</button>
+    </div>
+    <script src="../JS/juegoRompecabeza.js"></script>
+</body>
+
+</html>

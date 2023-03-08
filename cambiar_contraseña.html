@@ -1,0 +1,130 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+<!-- CSS INFORMATION -->
+<link rel="stylesheet" type="text/css" href="./CSS/estilos_informacion.css">
+<link rel="stylesheet" href="./CSS/navbar.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+
+<body onload="onLoad()">
+
+  <nav id="barra-nav">
+    <a href="./index.html"><img src="./Images/logoBrainPlay.png" alt="logo"></a>
+    <ul>
+      <li><a class="seccion" href="./index.html">Inicio</a></li>
+      <li><a class="seccion" href="./cuentos.html" data-page="cuentos">Cuentos</a></li>
+      <li><a class="seccion" href="./juegos.html" data-page="juegos">Juegos</a></li>
+    </ul>
+    <div class="botones">
+      <a class="ingreso" href="./Ingresar.html">Ingresar</a>
+      <a class="registro" href="./Registrar.html">Registrarse</a>
+    </div>
+    <div class="user-info">
+      <a class="seccion" href="./mi_perfil.html" data-page="mi_perfil">
+        <img src="./Images/user.png" alt="User">
+        <p id="nombre-usuario">Username</p>
+      </a>
+      <a class="logout" href="./Ingresar.html" id="cerrar">Cerrar sesión</a>
+    </div>
+  </nav>
+
+<!-- ||||||||||||||| -->
+<!-- ||  SECCIÓN  || -->
+<!-- ||||||||||||||| -->
+
+<main id="general">
+  <div class="bloque">
+      <div class="foto">
+          <div class="foto_perfil" id="imagen-perfil">
+              <!-- <img class="foto_perfil" src="/Images/foto_perfil.png" alt="foto perfil"> -->
+          </div> 
+          <div class="text-center">
+            <label for="Puntaje">Puntaje:</label>
+            <input type="text" id="Puntaje" name="Puntaje" value="" disabled>
+          </div>    
+           <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./Images/copa_madera-blanco-negro.jpg" class="d-block a" alt="copa 1" title="Aun no logras el objetivo" id="item1" >
+              </div>
+              <div class="carousel-item">
+                <img src="./Images/copa_bronce-blanco-negro.jpg" class="d-block a" alt="copa 2" title="Aun no logras el objetivo" id="item2">
+              </div>
+              <div class="carousel-item">
+                <img src="./Images/copa_plata-blanco-negro.jpg" class="d-block a" alt="copa 3" title="Aun no logras el objetivo" id="item3">
+              </div>
+              <div class="carousel-item">
+                <img src="./Images/copa_oro-blanco-negro.jpg" class="d-block a" alt="copa 4" title="Aun no logras el objetivo" id="item4">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div> 
+      </div>
+
+      <div class="datos marco">
+          <p>ACTUALIZAR CONTRASEÑA</p>
+          <form id="Actualizar-contraseña">
+              <div class="container-fluid px-4">
+                  <div class="row gx-5 my-5">
+                      <div class="col-4 izquierda-texto">
+                          <label for="Contraseña">Contraseña Nueva:</label>
+                      </div>
+                      <div class="col-8">
+                          <input type="password" id="Contraseña" name="Contraseña" value="" required>
+                      </div>
+                  </div>
+                  <div class="row gx-5 my-5">
+                      <div class="col-4 izquierda-texto" >
+                          <label for="Confirmar-Contraseña">Confirmación Contraseña Nueva:</label>
+                      </div>
+                      <div class="col-8">
+                          <input type="password" id="Confirmar-Contraseña" name="Confirmar-Contraseña" value="" required>
+                      </div>
+
+                  </div>
+              </div>
+          </form>
+          <div id="alerta">
+
+          </div>
+          <div class="container">
+            <div class="row gx-5 my-5">
+                <div class="col-12">
+                    <a id="Cambiar-contraseña" class="Cambiar-contraseña">Guardar Contraseña</a>
+                </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</main>
+
+<footer>
+<div class="footer-text-cont">
+<p>El aprendizaje es un tesoro que te seguira alla donde vayas.</p>
+<p class="text-creador">© Creado por Grupo 3</p>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+<script src="./JS/contraseña-get.js"></script>
+<script src="./JS/trofeos.js"></script>
+<script src="./JS/contraseña-put.js"></script>
+<script src="./JS/user-info.js"></script>
+
+</body>
+
+</html>

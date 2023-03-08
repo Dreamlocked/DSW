@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <html lang="es">
+  <link rel="shorcut icon" href="./Images/icono-brainplay.ico">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Juego de suma</title>
+  <link rel="shorcut icon" href="./Images/icono-brainplay.ico">
+	<link rel="stylesheet" href="../CSS/juegoSuma.css">
+</head>
+<body>
+	<h1>JUEGO DE SUMA</h1>
+  <h2 id="coment">Responde correctamente 5 sumas, para ganar  🥳</h2>
+	<div class="container">
+		<div class="izquierdo">
+			<div class="container-operacion">
+			 	<span id="suma">9 + 9 =</span>
+			 	<span class="resultado" id="resultado"> 18</span>
+			 </div>
+			 <span class="msj" id="msj">
+			 		
+			 </span>
+		</div>
+		<div class="derecha">
+			<span id="op1" class="opcion" onclick="controlarRespuesta(this)">18</span>
+			<span id="op2" class="opcion" onclick="controlarRespuesta(this)">17</span>
+			<span id="op3" class="opcion" onclick="controlarRespuesta(this)">8</span>
+		</div>
+	</div>
+  <div  class="botones">
+    <button onclick="comenzar()" id="reiniciar">Volver a jugar</button>
+    <button onclick="regresar()" id="regresar">Regresar</button>
+  </div>
+	<script src="../JS/juegoSuma.js"></script>
+</body>
+</html>

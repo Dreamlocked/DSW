@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Juego del ahorcado</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+        <link rel="shorcut icon" href="./Images/icono-brainplay.ico">
+        <link href="../CSS/estilos_ahorcado.css" rel="stylesheet">
+        </head>
+    <body>
+
+        <nav id="barra-nav">
+          <a href="../index.html"><img src="../Images/logoBrainPlay.png" alt="logo"></a>
+          <ul>
+            <li><a class="seccion" href="../index.html">Inicio</a></li>
+            <li><a class="seccion" href="../cuentos.html">Cuentos</a></li>
+            <li><a class="seccion" href="../juegos.html">Juegos</a></li>
+         </ul>
+         <div class="botones">
+          <a class="ingreso" href="../Ingresar.html">Ingresar</a>
+          <a class="registro" href="../Registrar.html">Registrarse</a>
+         </div>
+         <div class="user-info">
+           <a class="seccion" href="../mi_perfil.html">
+             <img src="../Images/user.png" alt="User">
+             <p id="nombre-usuario">Username</p>
+           </a>
+           <a class="logout" href="../Ingresar.html" id="cerrar">Cerrar sesión</a>
+         </div>
+        </nav>
+
+    <main id="general">
+        <div class="container text-center">
+            <h1>AHORCADO BIOLOGICO</h1>
+            <canvas id="pantalla" width="960px" height="450px"> <!-- etiqueta del canvas con sus medidas en la pantalla -->
+                Tu navegador no soporta Canvas.
+            </canvas>
+            <br><br>
+            <!-- El boton que nos sirve para recargar la pagina y asi generar una nueva palabra y volver a jugar -->
+            
+            <button id="boton" type="reset" onclick="javascript:window.location.reload();">Volver a Jugar</button>
+            <br><br>
+        </div>
+        
+    </main>
+        
+    <footer>
+        <div class="footer-container">
+            <span class="menu-title">Redes Sociales</span>
+            <div class="social-container">
+                <a href="https://www.facebook.com/" class="social-link"></a>
+                <a href="https://twitter.com/?lang=es" class="social-link"></a>
+                <a href="https://www.linkedin.com/feed/" class="social-link"></a>
+            </div>
+        </div>
+
+        <!--COPYRIGHT-->
+        <div class="copyright-container">
+            <span class="copyright">&copy;2022 creado por Grupo 3</span>
+        </div>
+    </footer>
+        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        
+    <script src="../JS/javascript_ahorcados.js"></script>
+    </body>
+</html>

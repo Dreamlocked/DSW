@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Estilos de la pagina-->
+    <link rel="stylesheet" href="./CSS/estilosQuizCuento.css">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+    <link rel="shorcut icon" href="./Images/icono-brainplay.ico">
+    <title>Cuestionario</title>
+</head>
+<body>
+    <div id="cuerpo">
+        <h1 id="titulo-cuento">Titulo del cuento</h1>
+        <!--Pantalla del juego-->
+        <div class="pantalla-juego" id="pantalla-juego">
+            <p id="preguntaCuento">Pregunta</p>
+            <div class="opciones">
+                <div class="opcion" id="op0" onclick="comprobarRespuesta(0)">
+                    <div class="letra" id="l0">A</div>
+                    <div class="nombre" id="n0">OPCION A</div>
+                </div>
+                <div class="opcion" id="op1" onclick="comprobarRespuesta(1)">
+                    <div class="letra" id="l1">B</div>
+                    <div class="nombre" id="n1">OPCION B</div>
+                </div>
+                <div class="opcion" id="op2" onclick="comprobarRespuesta(2)">
+                    <div class="letra" id="l2">C</div>
+                    <div class="nombre" id="n2">OPCION C</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Pantalla final-->
+    <div id="pantalla-final">
+        <h2>Correctas: <span id="numCorrectas">2</span></h2>
+        <h2>Incorrectas: <span id="numIncorrectas">1</span></h2>
+        <button class="btn" onclick="recargarPagina()">Volver a jugar</button>
+        <button class="btn" onclick="regresarCuento()">Salir</button>
+    </div>
+    <!--Footer-->
+    <footer>
+        <div class="footer-container">
+            <span class="menu-title">Redes Sociales</span>
+            <div class="social-container">
+                <a href="https://www.facebook.com/" class="social-link"></a>
+                <a href="https://twitter.com/?lang=es" class="social-link"></a>
+                <a href="https://www.linkedin.com/feed/" class="social-link"></a>
+            </div>
+        </div>
+
+        <!--COPYRIGHT-->
+        <div class="copyright-container">
+            <span class="copyright">© 2023 creado por Grupo 3</span>
+        </div>
+    </footer>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./JS/quizGameCuento.js"></script>
+</body>
+</html>
